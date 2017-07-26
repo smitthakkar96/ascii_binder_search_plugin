@@ -88,7 +88,6 @@ def generate_dump():
                         "content": doc_content['content'],
                         "site_name": site_name
                     })
-            import pdb; pdb.set_trace()
             for version in data:
                 dump_file = open('{}/data_{}.json'.format('_package/'+site_folder+'/', version), 'w+')
                 json.dump(data[version], dump_file)
