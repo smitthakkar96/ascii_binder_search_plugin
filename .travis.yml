@@ -10,14 +10,15 @@ rvu:
 cache: bundler
 
 before_install:
-  - rvm get stable --auto-dotfiles
-  - rvm install 2.3.3
+  - sudo apt-get install -y python3-pip
+  - sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+  - sudo apt-get install rubygems
+
 
 install:
-
   - sudo gem install ascii_binder
   - sudo pip3 install -r requirements.txt
-  - python setup.py install
+  - python3 setup.py install
 
 script:
   - flake8 --max-line-length=100
