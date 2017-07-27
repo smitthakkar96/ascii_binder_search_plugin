@@ -1,5 +1,5 @@
 language: python, ruby
-os: fedora
+dist: precise
 python:
   - "2.7"
 install:
