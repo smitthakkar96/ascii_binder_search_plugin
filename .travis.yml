@@ -1,11 +1,7 @@
-language: python
+language: ruby
 sudo: false
-python:
-  - "3.6.1"
-
-before_install:
-  - rvm get stable --auto-dotfiles
-  - rvm install 2.4.1
+rvm:
+  - 2.4.2
 
 install:
   - gem install ascii_binder
