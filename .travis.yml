@@ -1,24 +1,10 @@
-language: ruby
-
-dist: precise
-
-sudo: true
-
-rvu:
-  - 2.3.3
-
-cache: bundler
-
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install build-essential libssl-dev libffi-dev python-dev
-  - sudo apt-get install rubygems
-
-
+language: python, ruby
+python:
+  - "2.7"
 install:
-  - sudo gem install ascii_binder
-  - sudo pip3 install -r requirements.txt
-  - python3 setup.py install
+  - gem install ascii_binder
+  - sudo pip install -r requirements.txt
+  - sudo python setup.py install
 
 script:
   - flake8 --max-line-length=100
