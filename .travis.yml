@@ -5,7 +5,7 @@ python:
 
 before_install:
   - rvm get stable --auto-dotfiles
-  - rvm install 2.3.1
+  - rvm install 2.4.1
 
 install:
   - sudo pip install -r requirements.txt
