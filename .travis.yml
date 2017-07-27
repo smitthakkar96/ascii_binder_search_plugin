@@ -6,12 +6,10 @@ rvm:
 cache: bundler
 
 install:
+  - apt-get install gcc ruby ruby-dev libxml2 libxml2-dev  libxslt1-dev
   - gem install ascii_binder
-  - gem pristine --all
   - pip install -r requirements.txt
   - python setup.py install
-
-after_install: gem list
 
 script:
   - flake8 --max-line-length=100
