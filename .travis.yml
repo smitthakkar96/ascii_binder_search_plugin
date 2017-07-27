@@ -1,12 +1,13 @@
 language: python
-sudo: required
+sudo: false
 python:
   - "3.6.1"
+
+before_install:
+  - rvm get stable --auto-dotfiles
+  - rvm install 2.3.1
+
 install:
-  - rvm install ruby-2.3.3
-  - sudo apt-get install ruby-dev
-  - sudo gem install ascii_binder
-  - sudo gem pristine ascii_binder
   - sudo pip install -r requirements.txt
   - sudo python setup.py install
 
