@@ -8,6 +8,7 @@ before_install:
   - rvm install 2.4.1
 
 install:
+  - gem install ascii_binder
   - pip install -r requirements.txt
   - python setup.py install
 
