@@ -5,7 +5,7 @@ dist: precise
 sudo: true
 
 python:
-  - "2.7"
+  - 3.6
 
 rvm:
   - 2.3.3
