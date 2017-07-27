@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.6"
+  - "3.6.1"
 install:
   - gem install ascii_binder
   - sudo pip install -r requirements.txt
