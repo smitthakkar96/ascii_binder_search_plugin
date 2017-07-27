@@ -2,7 +2,7 @@ language: python
 python:
   - "3.6.1"
 install:
-  - gem install ascii_binder
+  - sudo gem install ascii_binder
   - sudo python3 -m pip install -r requirements.txt
   - sudo python3 setup.py install
 
