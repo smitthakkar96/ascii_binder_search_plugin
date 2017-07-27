@@ -3,6 +3,7 @@ sudo: required
 python:
   - "3.6.1"
 install:
+  - rvm install ruby-2.3.3
   - sudo apt-get install ruby-dev
   - sudo gem install ascii_binder
   - sudo gem pristine ascii_binder
