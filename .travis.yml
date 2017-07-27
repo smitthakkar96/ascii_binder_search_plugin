@@ -7,13 +7,14 @@ sudo: true
 python:
   - "3.6"
 
-rvm:
-  - 2.3.3
-
 cache: bundler
 
+before_install:
+  - rvm get stable --auto-dotfiles
+  - rvm install 2.3.3
 
 install:
+
   - sudo gem install ascii_binder
   - sudo pip3 install -r requirements.txt
   - python setup.py install
