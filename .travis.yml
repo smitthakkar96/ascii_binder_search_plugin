@@ -1,11 +1,11 @@
-language: python
+language: ruby
 
 dist: precise
 
 sudo: true
 
-python:
-  - "3.6"
+rvu:
+  - 2.3.3
 
 cache: bundler
 
