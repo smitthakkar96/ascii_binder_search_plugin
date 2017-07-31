@@ -149,8 +149,7 @@ def main():
             sys.exit()
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-s', '--search-template')
-    parser.add_argument('-S', '--static-dir')
+    parser.add_argument('-s', '--static-dir')
     parser.add_argument('-v', '--verbose', action='store_true')
     args = parser.parse_args()
 
