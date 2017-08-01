@@ -12,7 +12,8 @@ import codecs
 import pkg_resources
 import pkgutil
 
-from ascii_binder_search.lib import is_packaged, repo_check, distro_exists, find_and_parse_sitemap, copy_static_assets
+from ascii_binder_search.lib import is_packaged, repo_check, distro_exists, find_and_parse_sitemap
+from ascii_binder_search.lib import copy_static_assets
 import ascii_binder_search.indexers
 
 
