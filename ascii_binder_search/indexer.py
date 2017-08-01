@@ -12,8 +12,8 @@ import codecs
 import pkg_resources
 import pkgutil
 
-from .lib import is_packaged, repo_check, distro_exists, find_and_parse_sitemap, copy_static_assets
-from . import indexers
+from ascii_binder_search.lib import is_packaged, repo_check, distro_exists, find_and_parse_sitemap, copy_static_assets
+import ascii_binder_search.indexers
 
 
 dist = pkg_resources.get_distribution('ascii_binder_search')
@@ -155,7 +155,7 @@ def main():
     if args.verbose:
         verbose = True
 
-    known_indexers = find_indexers(indexers)
+    known_indexers = find_indexers(ascii_binder_search.indexers)
 
     if args.indexer not in known_indexers:
         print("Unknown indexer {}".format(args.indexer))
