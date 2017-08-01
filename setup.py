@@ -22,7 +22,7 @@ setup(
         'bin/ascii_binder_search'
     ],
     namespaces=[
-        'perceval.backends'
+        'ascii_binder_search.indexers'
     ],
 
 )
