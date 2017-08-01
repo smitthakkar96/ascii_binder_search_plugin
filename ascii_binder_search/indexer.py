@@ -50,9 +50,7 @@ class Indexer(object):
 
     def run(self):
         """ Executes the indexer """
-        self.backend_args = self.parse_indexer_arguments()
-        if not isinstance(self.backend_args, dict):
-            raise TypeError("parse_indexer_arguments must return a dict")
+        self.parse_indexer_arguments()
         with open('_distro_map.yml') as distro_map_yml:
             distro_map = yaml.load(distro_map_yml)
             for distro in distro_map:
