@@ -12,6 +12,14 @@ let initPlugin = function(onInit, onSearch, searchBox = '#searchBox', versionsDr
         });
     });
 
+    $(versionsDropDown).change(function() {
+        searchText = $(searchBox).val();
+        onSearch(searchText).then(function(results) {
+            results = highlightAndFormatResults(results);
+            paginateResults(results);
+        });
+    });
+
     let paginateResults = function(results) {
         $(paginationWrapper + ' > span').html('Total Results: ' + results.length);
         $('.result-wrapper > .pagination-wrapper').pagination({
