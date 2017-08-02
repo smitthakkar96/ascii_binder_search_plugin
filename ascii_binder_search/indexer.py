@@ -84,9 +84,9 @@ class Indexer(object):
                         })
                 copy_static_assets('_package/{}/'.format(site_folder),
                                    self.static_dir, self.verbose)
-#                 if self.backend_static_dir:
-#                     copy_static_assets('_package/{}/'.format(site_folder),
-#                                        self.backend_static_dir, self.verbose)
+                if self.backend_static_dir:
+                    copy_static_assets('_package/{}/'.format(site_folder),
+                                       self.backend_static_dir, self.verbose)
 
                 self.index(data, distro, site_folder)
 
