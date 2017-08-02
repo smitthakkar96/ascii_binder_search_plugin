@@ -9,8 +9,7 @@ setup(
     description=("A small utility that would help you to get search in asciibinder"),
     packages=[
                 'ascii_binder_search',
-                'ascii_binder_search.indexers',
-                'ascii_binder_search.indexers.core'
+                'ascii_binder_search.indexers'
             ],
     license="BSD",
     keywords="Asciibinder, ascii_binder_search",
