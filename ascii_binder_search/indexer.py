@@ -30,6 +30,7 @@ class Indexer(object):
     def __init__(self, verbose, static_dir):
         self.verbose = verbose
         self.static_dir = static_dir
+        self.backend_static_dir = None
 
     def parse_html(self, doc_path):
         """ Parses the title and the main article content from the documentation file
@@ -83,6 +84,10 @@ class Indexer(object):
                         })
                 copy_static_assets('_package/{}/'.format(site_folder),
                                    self.static_dir, self.verbose)
+                if self.backend_static_dir:
+                    copy_static_assets('_package/{}/'.format(site_folder),
+                                    self.backend_static_dir, self.verbose)
+
                 self.index(data, distro, site_folder)
 
     def index(self, dump, distro, site_folder):
