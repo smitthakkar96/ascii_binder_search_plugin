@@ -10,6 +10,7 @@ setup(
     packages=[
                 'ascii_binder_search',
                 'ascii_binder_search.indexers'
+                'ascii_binder_search.indexers.core'        
             ],
     license="BSD",
     keywords="Asciibinder, ascii_binder_search",
