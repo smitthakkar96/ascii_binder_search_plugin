@@ -86,7 +86,7 @@ class Indexer(object):
                                    self.static_dir, self.verbose)
                 if self.backend_static_dir:
                     copy_static_assets('_package/{}/'.format(site_folder),
-                                    self.backend_static_dir, self.verbose)
+                                       self.backend_static_dir, self.verbose)
 
                 self.index(data, distro, site_folder)
 
