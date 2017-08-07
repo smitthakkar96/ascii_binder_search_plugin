@@ -33,5 +33,6 @@ This is a small plugin that generates a data.json which contains the content and
 Everything that would be present in static folder will be copied to thier respective paths
 Please consider using ``` _javascripts/<js_file> ``` for javascripts and ``` _stylesheets/<js_file> ``` for stylesheets in your **search.html**
 
+
 ## screenshot
 ![](screenshot.png)

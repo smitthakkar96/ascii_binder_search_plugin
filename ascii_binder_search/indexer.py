@@ -16,7 +16,6 @@ from ascii_binder_search.lib import is_packaged, repo_check, distro_exists, find
 from ascii_binder_search.lib import copy_static_assets
 import ascii_binder_search.indexers
 
-
 dist = pkg_resources.get_distribution('ascii_binder_search')
 
 static_dir = os.path.join(dist.location, 'ascii_binder_search/static')
@@ -84,10 +83,10 @@ class Indexer(object):
                         })
                 copy_static_assets('_package/{}/'.format(site_folder),
                                    self.static_dir, self.verbose)
-#                 if self.backend_static_dir:
-#                     copy_static_assets('_package/{}/'.format(site_folder),
-#                                        self.backend_static_dir, self.verbose)
-
+                if self.backend_static_dir:
+                    copy_static_assets('_package/{}/'.format(site_folder),
+                                       os.path.join(self.static_dir, self.backend_static_dir),
+                                       self.verbose)
                 self.index(data, distro, site_folder)
 
     def index(self, dump, distro, site_folder):
@@ -164,6 +163,7 @@ def main():
     if args.indexer not in known_indexers:
         print("Unknown indexer {}".format(args.indexer))
         sys.exit(1)
-
     indexer = known_indexers[args.indexer](verbose, static_dir)
+    if os.path.isdir(os.path.join(static_dir, args.indexer)):
+        indexer.backend_static_dir = args.indexer
     indexer.run()

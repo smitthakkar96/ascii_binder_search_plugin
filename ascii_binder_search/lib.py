@@ -45,7 +45,10 @@ def copy_static_assets(path, static_dir, verbose):
     # create _javascripts folder under the site folder if not exists
     if not os.path.exists(path + '_javascripts'):
         os.mkdir(path + '_javascripts', 0o777)
-    contents = os.listdir(static_dir)
+    contents = []
+    for asset in os.listdir(static_dir):
+        if os.path.isfile(os.path.join(static_dir, asset)):
+            contents.append(asset)
     for asset_path in contents:
         dest = path
         if '.css' in asset_path:
