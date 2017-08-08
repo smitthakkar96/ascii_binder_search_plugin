@@ -20,7 +20,7 @@ This is a small plugin that generates a data.json which contains the content and
 
 
 ## Usage
-1. After successful installtion it's time give plugin a try, this plugin by default ships a indexer that indexes the data on client side
+1. After successful installation it's time to give this plugin a try, this plugin by default ships a indexer that indexes the data on client side
 
         ascii_binder_search -i front_end_indexer -v
 
