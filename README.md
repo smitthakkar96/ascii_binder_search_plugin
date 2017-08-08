@@ -38,10 +38,6 @@ for indexer args you must checkout the doc that is present with the indexer that
 Everything that would be present in static folder will be copied to thier respective paths
 Please consider using ``` _javascripts/<js_file> ``` for javascripts and ``` _stylesheets/<js_file> ``` for stylesheets in your **search.html**
 
-## screenshot
-![](screenshot.png)
-
-
 ## How does it work?
 ![](plugin_working.png)
 
