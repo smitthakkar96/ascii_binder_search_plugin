@@ -1,7 +1,8 @@
 # AsciiBinder Search Plugin  [![Build Status](https://travis-ci.org/smitthakkar96/ascii_binder_search_plugin.svg?branch=master)](https://travis-ci.org/smitthakkar96/ascii_binder_search_plugin)
 
 ## What is this?
-This is a small plugin that generates a data.json which contains the content and title of each page and puts it in each distro. This file is indexed and searched with search template client side. This plugin provides a default search template that is ready to use, but if you want you can use your own search template. See the instructions below.
+This is a small plugin developed to help the opensource projects using asciibinder to implment search functionility in their site. With this plugin it is very convenient to implement search functionality in your documentation site. This plugin ships you a indexer that works on client side but it is easy to extend it's capability by plugging in other supported indexer or build your own indexer that works with the search engine that you want. 
+
 
 ## Installation instructions
 1. Make sure you have a working installation of python3
