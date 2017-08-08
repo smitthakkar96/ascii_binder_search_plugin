@@ -1,7 +1,7 @@
 # AsciiBinder Search Plugin  [![Build Status](https://travis-ci.org/smitthakkar96/ascii_binder_search_plugin.svg?branch=master)](https://travis-ci.org/smitthakkar96/ascii_binder_search_plugin)
 
 ## What is this?
-This is a small plugin developed to help the opensource projects using asciibinder to implment search functionility in their site. With this plugin it is very convenient to implement search functionality in your documentation site. This plugin ships you a indexer that works on client side but it is easy to extend it's capability by plugging in other supported indexer or build your own indexer that works with the search engine that you want. 
+This is a small plugin developed to help the opensource projects using asciibinder to implement search functionality in their site. With this plugin it is very convenient to implement search functionality in your documentation site. This plugin ships you a indexer that works on client side but it is easy to extend it's capability by plugging in other supported indexer or build your own indexer that works with the search engine that you want. 
 
 
 ## Installation instructions
@@ -36,7 +36,7 @@ for indexer args you must checkout the doc that is present with the indexer that
 
         ascii_binder_search -s <path_to_static_directory>
 
-Everything that would be present in static folder will be copied to thier respective paths
+Everything that would be present in static folder will be copied to their respective paths
 Please consider using ``` _javascripts/<js_file> ``` for javascripts and ``` _stylesheets/<js_file> ``` for stylesheets in your **search.html**
 
 ## How does it work?
